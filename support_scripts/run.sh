@@ -7,7 +7,7 @@
 echo "Starting up selenium hub and nodes..."
 docker-compose up -d
 
-./internet_explorer_node.sh
+./windows_node.sh
 
 echo "Selenium Hub and Nodes Sucessfully statrted..."
 
