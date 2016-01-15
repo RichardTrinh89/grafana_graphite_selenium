@@ -7,6 +7,6 @@
 DOCKER_MACHINE_IP=$(echo $DOCKER_HOST | cut -d : -f 2 | cut -d '/' -f 3)
 
 java -jar selenium-server-standalone-2.48.2.jar -role node -hub http://${DOCKER_MACHINE_IP}:4444/grid/register \
--browser "browserName=internet explorer, maxInstances=5" \
+-browser "browserName=internet explorer, maxInstances=5" -Dwebdriver.ie.driver=C:\Drivers\\IEDriverServer.exe \
 -browser "browserName=firefox, maxInstances=5" \
--browser "browserName=chrome, maxInstances=5" &> /dev/null &
+-browser "browserName=chrome, maxInstances=5" -Dwebdriver.chrome.driver=C:\Drivers\\chromedriver.exe &> /dev/null &
